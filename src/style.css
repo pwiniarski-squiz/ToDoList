@@ -1,0 +1,211 @@
+    body {
+        background: #FFF;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    
+    header {
+        position: relative;
+        background-color: #00adff;
+        color: #FFF;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    #logo {
+        position: absolute;
+        stroke: #FFF;
+        left: 10px;
+    }
+    
+    .circ {
+        opacity: 1;
+        stroke-dasharray: 130;
+        stroke-dashoffset: 130;
+        -webkit-transition: all 1s;
+        -moz-transition: all 1s;
+        -ms-transition: all 1s;
+        -o-transition: all 1s;
+        transition: all 1s;
+    }
+    
+    .tick {
+        stroke-dasharray: 50;
+        stroke-dashoffset: 50;
+        -webkit-transition: stroke-dashoffset 1s 0.5s ease-out;
+        -moz-transition: stroke-dashoffset 1s 0.5s ease-out;
+        -ms-transition: stroke-dashoffset 1s 0.5s ease-out;
+        -o-transition: stroke-dashoffset 1s 0.5s ease-out;
+        transition: stroke-dashoffset 1s 0.5s ease-out;
+    }
+    
+    svg .path {
+        stroke-dashoffset: 0;
+    }
+    
+    main {
+        padding: 2px 0;
+    }
+    
+    .container {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #addTaskForm {
+        margin-bottom: 0;
+        padding: 10px 0;
+    }
+    
+    #task {
+        width: 200px;
+        height: 25px;
+        border-radius: 2px 5px;
+        outline: none;
+        border: 0;
+        padding-left: 10px;
+        margin: 0 20px;
+    }
+    
+    #addTask {
+        width: 100px;
+        height: 26px;
+        border-radius: 5px;
+        background-color: white;
+        outline: none;
+        border: none;
+        color: #00adff;
+        font-size: 1rem;
+        transition: background-color 1s;
+    }
+    
+    .tasksToDo {
+        flex-direction: column;
+        align-items: center;
+        background-color: #00adff;
+        color: #FFF;
+    }
+    
+    .filterList {
+        display: flex;
+        align-self: flex-start;
+        margin-left: 11px;
+    }
+    
+    #clearList {
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: white;
+        outline: none;
+        border: none;
+        color: #00adff;
+        font-size: 1rem;
+        transition: background-color 1s;
+    }
+    
+    #clearList:hover,
+    #addTask:hover {
+        background-color: #faeb8f;
+        cursor: pointer;
+    }
+    
+    #taskList {
+        list-style-type: none;
+        width: 100%;
+        padding: 0;
+        opacity: 1;
+        transition: opacity ease-out 1s;
+    }
+    
+    .removed {
+        opacity: 0;
+    }
+    
+    .taskItem {
+        background: rgb(249, 235, 144) url('https://cdn3.iconfinder.com/data/icons/softwaredemo/PNG/256x256/DrawingPin1_Blue.png') 50% 0px no-repeat;
+        padding: 20px;
+        border-bottom: 1px solid #FFD;
+        position: relative;
+        transition: background-color 1s;
+        display: inline-flex;
+        align-items: center;
+        width: 20%;
+        height: 25%;
+        color: #00adff;
+        will-change: transform;
+        margin: 10px;
+        line-height: 3.2;
+        /*cursor: move;*/
+        transition: all 200ms;
+        background-size: 50px;
+        /*user-select: none;*/
+    }
+    
+    .taskItem::after {
+        content: '';
+        left: 50%;
+        position: absolute;
+        cursor: pointer;
+        transition: all 200ms;
+        transition-timing-function: cubic-bezier(0.48, 0.72, 0.62, 1.50);
+        transform: translateX(120%);
+        opacity: 0;
+    }
+    
+    .taskItem:hover::after {
+        opacity: 1;
+        transform: translate(0);
+    }
+    
+    .over {
+        transform: scale(1.1, 1.1);
+    }
+    
+    .taskItem:hover {
+        background-color: #f5dd68/*#116bb7*/
+        ;
+    }
+    
+    .checkbox {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        border: 1px solid #00adff;
+        display: flex;
+    }
+    
+    .checkbox i {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .taskItem__remove {
+        position: absolute;
+        top: 20px;
+        right: 10px;
+        border: none;
+        transition: color 1s;
+        color: #00adff;
+    }
+    
+    .taskItem__remove:hover {
+        color: #116bb7;
+    }
+    
+    .unmarked {
+        opacity: 0;
+        transition: opacity 1s;
+    }
+    
+    .marked {
+        opacity: 1;
+        transition: opacity 1s;
+    }
