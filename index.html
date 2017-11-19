@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>ToDoList Application</title>
+    <!--<script src="https://unpkg.com/lodash@4.16.6"></script>-->
+</head>
+
+<body>
+    <header>
+        <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 45 45" style="enable-background:new 0 0 45 45;" xml:space="preserve" width="45px" height="45px">
+            <path class="circ path" style="fill:none;stroke:#FFF;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" d="
+        M30.5,6.5L30.5,6.5c6.6,6.6,6.6,17.4,0,24l0,0c-6.6,6.6-17.4,6.6-24,0l0,0c-6.6-6.6-6.6-17.4,0-24l0,0C13.1-0.2,23.9-0.2,30.5,6.5z"></path>
+            <polyline class="tick path" style="fill:none;stroke:#FFF;stroke-width:3;stroke-linejoin:round;stroke-miterlimit:10;" points="
+        11.6,20 15.9,24.2 26.4,13.8 "></polyline>
+        </svg>
+        <div class="row">
+            <form id="addTaskForm">
+                <label for="task">Add task:</label>
+                <input id="task" type="text" name="task">
+                <button id="addTask" type="button">Add task</button>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="row tasksToDo">
+                <h1>ToDoList:</h1>
+                <div class="filterList">
+                    <button id="clearList">clearList</button>
+                </div>
+                <ul id="taskList">
+                </ul>
+            </section>
+        </div>
+    </main>
+    <script type="text/javascript" src="bundle.js" charset="utf-8"></script>
+    <!--<script src="./src/index.js"></script>-->
+</body>
+
+</html>
