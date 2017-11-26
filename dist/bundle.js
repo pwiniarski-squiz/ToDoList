@@ -133,7 +133,6 @@ function dragEnd(e) {
 }
 
 function addEventsDragAndDrop(el) {
-    console.log('addEventsDragAndDrop');
     el.addEventListener('dragstart', dragStart, false);
     el.addEventListener('dragenter', dragEnter, false);
     el.addEventListener('dragover', dragOver, false);
