@@ -22,6 +22,6 @@ Functionalities:
 - drag and drop tasks
 
 
-If you want to check it, then just go: https://pwiniarski-squiz.github.io/ToDoList/
+If you want to check it, then just go: https://pwiniarski1991.github.io/ToDoList/
 Let me know what you think. Every feedback is very welcome  
 
